@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entries_alarm_type">
+        <item>never</item>
+        <item>when plugged in</item>
+        <item>always</item>
+    </string-array>
+    <string-array name="entries_background">
+        <item>transparent</item>
+        <item>white</item>
+        <item>grey 25%</item>
+        <item>grey 50%</item>
+        <item>grey 75%</item>
+        <item>black</item>
+    </string-array>
+    <string-array name="unit_second">
+        <item>no seconds</item>
+        <item>one second</item>
+        <item>{0} seconds</item>
+    </string-array>
+    <string-array name="unit_minute">
+        <item>no minutes</item>
+        <item>one minute</item>
+        <item>{0} minutes</item>
+    </string-array>
+    <string-array name="unit_hour">
+        <item>no hours</item>
+        <item>one hour</item>
+        <item>{0} hours</item>
+    </string-array>
+    <string-array name="unit_day">
+        <item>no days</item>
+        <item>one day</item>
+        <item>{0} days</item>
+    </string-array>
+    <string name="days_label">days</string>
+    <string name="hours_label">hours</string>
+    <string name="minutes_label">minutes</string>
+    <string name="seconds_label">seconds</string>
+    <string name="title_alarm_type">Wake from sleep</string>
+    <string name="title_sync_dialog">Pushy mode</string>
+    <string name="summary_on_sync_dialog">progress screen is always displayed</string>
+    <string name="summary_off_sync_dialog">progress screen is displayed for manual synchronization only</string>
+    <string name="title_sync_interval">Interval</string>
+    <string name="title_sync_offset">Start</string>
+    <string name="title_sync_now">Synchronize now</string>
+    <string name="summary_sync_now">tap to trigger synchronization</string>
+    <string name="title_enable_wifi">Wifi</string>
+    <string name="summary_on_enable_wifi">wifi enabled while synchronizing</string>
+    <string name="summary_off_enable_wifi">no change in wifi state when synchronizing</string>
+    <string name="title_sync_timeout">Timeout</string>
+    <string name="title_background">Background</string>
+    <string name="title_sync_url">URL</string>
+    <string name="title_install">System modification</string>
+    <string name="summary_on_install">system partition modified, overriding all sleep images</string>
+    <string name="summary_off_install">system partition in original state, limited function</string>
+    <string name="title_sync_auto">Schedule</string>
+    <string name="duration_none">none</string>
+    <string name="sync_none">no synchronization scheduled</string>
+    <string name="sync_next">next on {0,date,full} {0,time,long}</string>
+    <string name="summary_datetime">{0,date,full} {0,time,long}</string>
+    <string name="title_narcolepsy_mode">Narcolepsy mode</string>
+    <string name="summary_off_narcolepsy_mode">staying awake until screen is locked by system</string>
+    <string name="summary_on_narcolepsy_mode">falling asleep immediately after wakeup</string>
+</resources>

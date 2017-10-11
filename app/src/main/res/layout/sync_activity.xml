@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:contentDescription="Large updater icon"
+        android:padding="24sp"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_large" />
+
+    <TextView
+        android:id="@+id/logView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:padding="24sp"
+        android:text="Some log entry"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textColor="@android:color/black"
+        android:typeface="monospace"
+        android:visibility="visible" />
+</LinearLayout>
