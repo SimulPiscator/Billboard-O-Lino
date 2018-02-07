@@ -4,19 +4,12 @@
     tools:ignore="MissingTranslation">
 
     <!-- tolino's suspend image names, cannot be changed -->
-    <string name="image_unplugged">suspend.jpg</string>
-    <string name="image_plugged_charging">suspend_charging.jpg</string>
-    <string name="image_plugged_full">suspend_batteryfull.jpg</string>
+    <string name="image_unplugged" translatable="false">suspend.jpg</string>
+    <string name="image_plugged_charging" translatable="false">suspend_charging.jpg</string>
+    <string name="image_plugged_full" translatable="false">suspend_batteryfull.jpg</string>
     <!-- where to put rendered images -->
-    <string name="target_image_path">/mnt/sdcard</string>
-    <string name="target_image_path_installed">/data/sleep/images</string>
-    <string name="original_image_path">/system/usr/sleep/drawable-nodpi</string>
-    <!-- where to search for templates, in reverse order of precedence -->
-    <string-array name="template_path">
-        <item>/system/usr/sleep/drawable-nodpi/suspend.jpg</item>
-    </string-array>
-    <string-array name="template_path_installed">
-        <item>/data/sleep/templates/system/</item>
-        <item>/data/sleep/templates/user/</item>
-    </string-array>
+    <string name="target_image_path_installed" translatable="false">/data/sleep/images</string>
+    <string name="original_image_path" translatable="false">/system/usr/sleep/drawable-nodpi</string>
+    <!-- file to replace with custom transition image -->
+    <string name="transition_image_location" translatable="false">/data/sleep/images/transition.jpg</string>
 </resources>

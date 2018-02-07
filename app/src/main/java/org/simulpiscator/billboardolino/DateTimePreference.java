@@ -9,8 +9,6 @@ import android.widget.DatePicker;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
-import java.util.Locale;
-import java.util.TimeZone;
 
 class DateTimePreference extends DialogPreference {
     private DatePicker mDatePicker;

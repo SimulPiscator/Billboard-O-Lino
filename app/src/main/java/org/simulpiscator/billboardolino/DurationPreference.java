@@ -6,7 +6,6 @@ import android.content.res.TypedArray;
 import android.preference.DialogPreference;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.ViewDebug;
 import android.widget.NumberPicker;
 
 import java.text.MessageFormat;

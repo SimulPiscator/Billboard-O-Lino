@@ -2,18 +2,29 @@
 <resources>
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation">
-    <string-array name="entry_values_background">
-        <item>-1</item>
-        <item>255</item>
-        <item>191</item>
-        <item>127</item>
-        <item>63</item>
+
+    <string-array name="orientation_entry_values">
         <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
 
-    <string-array name="entry_values_alarm_type">
-        <item>1</item> <!-- AlaramManager.RTC -->
-        <item>0</item> <!-- AlaramManager.RTC_WAKEUP, only works on Tolino when connected to charger -->
+    <string-array name="waveform_mode_entry_values">
+        <item>MODE_DU</item>
+        <item>MODE_GC4</item>
+        <item>MODE_GC16</item>
+    </string-array>
+
+    <string-array name="transition_image_entry_values">
+        <item>blank_0</item>
+        <item>blank_50</item>
+        <item>blank_100</item>
+    </string-array>
+
+    <string-array name="alarm_type_entry_values">
+        <item>1</item> <!-- AlarmManager.RTC -->
+        <item>0</item> <!-- AlarmManager.RTC_WAKEUP, only works on Tolino when connected to charger -->
         <item>4</item> <!-- Undefined in Android API, on Tolino behaves as RTC_WAKEUP should -->
     </string-array>
 </resources>

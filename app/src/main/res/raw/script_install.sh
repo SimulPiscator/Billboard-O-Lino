@@ -1,20 +1,11 @@
 su system
     mkdir -p $PATH_IMAGES
-    mkdir -p $PATH_TEMPLATES_USER
-    mkdir -p $PATH_TEMPLATES_SYSTEM
-    busybox cp $PATH_SYSTEM/* $PATH_TEMPLATES_SYSTEM/
-    busybox cp $PATH_EPUB/* $PATH_TEMPLATES_SYSTEM/
-    busybox cp $PATH_TEMPLATES_SYSTEM/* $PATH_IMAGES/
-    if test -e $PATH_USERIMG; then
-      busybox cp $PATH_USERIMG $PATH_TEMPLATES_USER/
-      mv $PATH_USERIMG $PATH_USERIMG.$SUFFIX
-    fi
-
+    busybox cp $PATH_SYSTEM/suspend.jpg $PATH_IMAGES/transition.jpg
+    ln -s $PATH_IMAGES/transition.jpg $PATH_IMAGES/suspend.jpg
+    ln -s $PATH_IMAGES/transition.jpg $PATH_IMAGES/suspend_charging.jpg
+    ln -s $PATH_IMAGES/transition.jpg $PATH_IMAGES/suspend_batteryfull.jpg
     chmod 0666 $PATH_IMAGES/*
-    chmod 0644 $PATH_TEMPLATES_SYSTEM/*
     chmod 0755 $PATH_IMAGES
-    chmod 0755 $PATH_TEMPLATES_SYSTEM
-    chmod 0755 $PATH_TEMPLATES_USER
 exit
 
 # rename original image directories and create symlinks instead

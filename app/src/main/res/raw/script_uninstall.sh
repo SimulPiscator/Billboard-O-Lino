@@ -8,8 +8,5 @@ if test -e $PATH_EPUB.$SUFFIX; then
   rm $PATH_EPUB && mv $PATH_EPUB.$SUFFIX $PATH_EPUB
 fi
 mount -o remount,ro /system
-if test -e $PATH_USERIMG.$SUFFIX; then
-  test -e $PATH_USERIMG || mv $PATH_USERIMG.$SUFFIX $PATH_USERIMG
-fi
 sync
 exit 0

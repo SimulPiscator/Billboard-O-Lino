@@ -1,18 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="entries_alarm_type">
+    <string name="sync_interval_title">Interval</string>
+    <string name="sync_offset_title">Start</string>
+    <string name="sync_now_title">Synchronize now</string>
+    <string name="sync_now_summary">tap to trigger synchronization</string>
+    <string name="enable_wifi_title">Wifi</string>
+    <string name="enable_wifi_summary_on">wifi enabled while synchronizing</string>
+    <string name="enable_wifi_summary_off">no change in wifi state when synchronizing</string>
+    <string name="connectivity_timeout_title">Internet connectivity timeout</string>
+    <string name="sync_url_title">URL</string>
+    <string name="enable_javascript_title">Enable JavaScript</string>
+    <string name="enable_javascript_summary_on">JavaScript enabled for rendering (more compatible)</string>
+    <string name="enable_javascript_summary_off">JavaScript disabled for rendering (more secure)</string>
+    <string name="sync_auto_title">Synchronize periodically</string>
+    <string name="duration_none">none</string>
+    <string name="sync_none">no synchronization scheduled</string>
+    <string name="sync_next">next on {0,date,full} {0,time,long}</string>
+    <string name="datetime_summary">{0,date,full} {0,time,long}</string>
+    <string name="modify_system_title">Override system sleep images (requires root)</string>
+    <string name="modify_system_summary_off">displaying system sleep images</string>
+    <string name="modify_system_summary_on">overriding sleep images</string>
+    <string name="act_on_sleep_title">Display on sleep</string>
+    <string name="act_on_sleep_summary_off">standard image displayed when sleeping</string>
+    <string name="act_on_sleep_summary_on">device will display image from URL when sleeping</string>
+    <string name="act_on_shutdown_summary_off">standard image displayed when powered off</string>
+    <string name="act_on_shutdown_summary_on">device will display image from URL when powered off</string>
+    <string name="act_on_shutdown_title">Display on shutdown</string>
+
+    <string name="alarm_type_title">Wake up for synchronization</string>
+    <string-array name="alarm_type_entries">
         <item>never</item>
         <item>when plugged in</item>
         <item>always</item>
     </string-array>
-    <string-array name="entries_background">
-        <item>transparent</item>
-        <item>white</item>
-        <item>grey 25%</item>
-        <item>grey 50%</item>
-        <item>grey 75%</item>
-        <item>black</item>
+
+    <string name="orientation_title">Orientation</string>
+    <string-array name="orientation_entries">
+        <item>portrait</item>
+        <item>landscape</item>
+        <item>portrait up-down</item>
+        <item>landscape up-down</item>
     </string-array>
+
+    <string name="waveform_mode_title">Image quality</string>
+    <string-array name="waveform_mode_entries">
+        <item>black and white, will not flash during update</item>
+        <item>4 shades, will flash during update</item>
+        <item>16 shades, will flash during update</item>
+    </string-array>
+
+    <string name="transition_image_title">Transition image</string>
+    <string-array name="transition_image_entries">
+        <item>solid black</item>
+        <item>solid gray</item>
+        <item>solid white</item>
+    </string-array>
+
+    <string name="message_wifi_enable_failed">failed to enable wifi</string>
+    <string name="message_no_connection">no internet connection within %1$d seconds</string>
+    <string name="message_synchronization_succeeded">Synchronization succeeded</string>
+    <string name="message_synchronization_failed">Synchronization failed:</string>
+
     <string-array name="unit_second">
         <item>no seconds</item>
         <item>one second</item>
@@ -37,29 +85,5 @@
     <string name="hours_label">hours</string>
     <string name="minutes_label">minutes</string>
     <string name="seconds_label">seconds</string>
-    <string name="title_alarm_type">Wake from sleep</string>
-    <string name="title_sync_dialog">Pushy mode</string>
-    <string name="summary_on_sync_dialog">progress screen is always displayed</string>
-    <string name="summary_off_sync_dialog">progress screen is displayed for manual synchronization only</string>
-    <string name="title_sync_interval">Interval</string>
-    <string name="title_sync_offset">Start</string>
-    <string name="title_sync_now">Synchronize now</string>
-    <string name="summary_sync_now">tap to trigger synchronization</string>
-    <string name="title_enable_wifi">Wifi</string>
-    <string name="summary_on_enable_wifi">wifi enabled while synchronizing</string>
-    <string name="summary_off_enable_wifi">no change in wifi state when synchronizing</string>
-    <string name="title_sync_timeout">Timeout</string>
-    <string name="title_background">Background</string>
-    <string name="title_sync_url">URL</string>
-    <string name="title_install">System modification</string>
-    <string name="summary_on_install">system partition modified, overriding all sleep images</string>
-    <string name="summary_off_install">system partition in original state, limited function</string>
-    <string name="title_sync_auto">Schedule</string>
-    <string name="duration_none">none</string>
-    <string name="sync_none">no synchronization scheduled</string>
-    <string name="sync_next">next on {0,date,full} {0,time,long}</string>
-    <string name="summary_datetime">{0,date,full} {0,time,long}</string>
-    <string name="title_narcolepsy_mode">Narcolepsy mode</string>
-    <string name="summary_off_narcolepsy_mode">staying awake until screen is locked by system</string>
-    <string name="summary_on_narcolepsy_mode">falling asleep immediately after wakeup</string>
+
 </resources>

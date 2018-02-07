@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sync_offset_title">Startzeit</string>
+    <string name="sync_interval_title">Intervall</string>
+    <string name="sync_now_title">Jetzt synchronisieren</string>
+    <string name="sync_now_summary">zum Synchronisieren tippen</string>
+    <string name="enable_wifi_title">WLAN</string>
+    <string name="enable_wifi_summary_on">WLAN während des Synchronisierens einschalten</string>
+    <string name="enable_wifi_summary_off">kein vorübergehendes Einschalten</string>
+    <string name="connectivity_timeout_title">Warten auf Internetverbindung</string>
+    <string name="sync_url_title">URL</string>
+    <string name="sync_auto_title">Automatisch synchronisieren</string>
+    <string name="duration_none">keine Zeitdauer</string>
+    <string name="sync_none">kein Synchronisieren vorgesehen</string>
+    <string name="sync_next">nächstes Synchronisieren am {0,date,full}, {0,time,long}</string>
+    <string name="datetime_summary">{0,date,full} {0,time,long}</string>
+    <string name="modify_system_title">Systembilder ersetzen (benötigt Root)</string>
+    <string name="modify_system_summary_off">Systembilder werden angezeigt</string>
+    <string name="modify_system_summary_on">Übergangsbild wird angezeigt</string>
+    <string name="act_on_sleep_title">Anzeigen im Ruhezustand</string>
+    <string name="act_on_sleep_summary_off">im Ruhezustand wird das Standardbild angezeigt</string>
+    <string name="act_on_sleep_summary_on">im Ruhezustand wird das heruntergeladene Bild angezeigt</string>
+    <string name="act_on_shutdown_title">Ausschaltbild ersetzen</string>
+    <string name="act_on_shutdown_summary_off">beim Ausschalten wird das Standardbild angezeigt</string>
+    <string name="act_on_shutdown_summary_on">beim Ausschalten wird das heruntergeladene Bild angezeigt</string>
+
+    <string name="enable_javascript_title">JavaScript erlauben</string>
+    <string name="enable_javascript_summary_on">JavaScript ein (kompatibler)</string>
+    <string name="enable_javascript_summary_off">JavaScript aus (sicherer)</string>
+
+    <string name="alarm_type_title">Gerät zum Synchronisieren aufwecken?</string>
+    <string-array name="alarm_type_entries">
+        <item>nie</item>
+        <item>am Netzteil</item>
+        <item>immer</item>
+    </string-array>
+
+    <string name="orientation_title">Ausrichtung</string>
+    <string-array name="orientation_entries">
+        <item>aufrecht</item>
+        <item>quer</item>
+        <item>kopfüber</item>
+        <item>quer kopfüber</item>
+    </string-array>
+
+    <string name="waveform_mode_title">Bildqualität</string>
+    <string-array name="waveform_mode_entries">
+        <item>Schwarzweiß, glatter Übergang</item>
+        <item>4 Graustufen, blinkt beim Anzeigen</item>
+        <item>16 Graustufen, blinkt beim Anzeigen</item>
+    </string-array>
+
+    <string name="transition_image_title">Übergangsbild</string>
+    <string-array name="transition_image_entries">
+        <item>schwarze Fläche</item>
+        <item>graue Fläche</item>
+        <item>weiße Fläche</item>
+    </string-array>
+
+    <string name="message_wifi_enable_failed">WLAN konnte nicht aktiviert werden</string>
+    <string name="message_no_connection">konnte innerhalb von %1$d Sekunden keine Internetverbindung herstellen</string>
+    <string name="message_synchronization_succeeded">Erfolgreich synchronisiert</string>
+    <string name="message_synchronization_failed">Synchronisieren gescheitert:</string>
+
+    <string-array name="unit_second">
+        <item>0 Sekunden</item>
+        <item>eine Sekunde</item>
+        <item>{0} Sekunden</item>
+    </string-array>
+    <string-array name="unit_minute">
+        <item>0 Minuten</item>
+        <item>eine Minute</item>
+        <item>{0} Minuten</item>
+    </string-array>
+    <string-array name="unit_hour">
+        <item>0 Stunden</item>
+        <item>eine Stunde</item>
+        <item>{0} Stunden</item>
+    </string-array>
+    <string-array name="unit_day">
+        <item>0 Tage</item>
+        <item>ein Tag</item>
+        <item>{0} Tage</item>
+    </string-array>
+    <string name="days_label">Tage</string>
+    <string name="hours_label">Stunden</string>
+    <string name="minutes_label">Minuten</string>
+    <string name="seconds_label">Sekunden</string>
+</resources>
