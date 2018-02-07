@@ -24,7 +24,7 @@ Paths to sleep images are hardcoded into the Tolino system, thus it is necessary
 system partition in order to have it display a different image when going to sleep.
 The modification is harmless and may be reverted any time, but requires root access while being applied, or reverted.
 Proceed as follows:
-1. Make sure there is an su binary installed at /system/bin/su or /system/xbin/su, plus a compatible superuser app to grant
+1. Make sure there is an su binary installed at `/system/bin/su` or `/system/xbin/su`, plus a compatible superuser app to grant
 root access to Android apps.
 2. You may want to temporarily enable both Window Animations and Transitions under Developer settings, to make sure the e-ink
 display is updated often enough for dialog windows to appear properly during the next steps.
@@ -40,6 +40,7 @@ When "override system sleep images" is checked in the app's preferences, `/data/
 * `suspend.jpg`
 * `suspend_charging.jpg`
 * `suspend_batteryfull.jpg`
+
 By default, `suspend*.jpg` files are symlinks to `transition.jpg,` which is updated by
 the app whenever a different transition image is selected.
 By replacing symlinks with actual files, or pointing them elsewhere, you may use custom transition images.
