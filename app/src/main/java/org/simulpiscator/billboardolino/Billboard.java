@@ -160,7 +160,7 @@ class Billboard {
         }
         else if(when >= 0){
             int type = Integer.parseInt(prefs.getString(KEY_ALARM_TYPE, "4"));
-            long interval = getSyncInterval();
+            long interval = getSyncIntervalMs();
             boolean repeat = interval > 0;
             if(repeat) {
                 try {
@@ -199,7 +199,7 @@ class Billboard {
 
         long    now = System.currentTimeMillis(),
                 syncoffset = prefs.getLong(KEY_SYNC_OFFSET, 0);
-        long    syncinterval = getSyncInterval(),
+        long    syncinterval = getSyncIntervalMs(),
                 timeout = getConnectivityTimeoutMs();
         long minInterval = timeout + 1000;
         if(syncinterval < minInterval)
@@ -248,10 +248,10 @@ class Billboard {
         return new File(path);
     }
 
-    private long getConnectivityTimeoutMs() {
+    long getConnectivityTimeoutMs() {
         return getPreferences().getInt(KEY_CONNECTIVITY_TIMEOUT, 5)*1000;
     }
-    private long getSyncInterval() {
+    long getSyncIntervalMs() {
         long syncinterval = getPreferences().getInt(KEY_SYNC_INTERVAL, 0) * 1000;
         syncinterval = Math.max(syncinterval, getConnectivityTimeoutMs() + 1000);
         return syncinterval;

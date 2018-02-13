@@ -363,13 +363,14 @@ Java_org_simulpiscator_billboardolino_EInkFb_nativeSetPowerDownDelay(JNIEnv *env
 
 extern "C"
 JNIEXPORT jint JNICALL
-Java_org_simulpiscator_billboardolino_EInkFb_nativeRefresh(JNIEnv *env, jobject, jint obj, jint waveform_mode)
+Java_org_simulpiscator_billboardolino_EInkFb_nativeRefresh(JNIEnv *env, jobject, jint obj, jint waveform_mode, jint refresh_id)
 {
-    int id = NativeFramebuffer::nextRefreshId();
+    if(refresh_id == 0)
+        refresh_id = NativeFramebuffer::nextRefreshId();
     auto p = reinterpret_cast<NativeFramebuffer*>(obj);
-    if(!p || !p->refresh(waveform_mode, id))
+    if(!p || !p->refresh(waveform_mode, refresh_id))
         return 0;
-    return id;
+    return refresh_id;
 }
 
 extern "C"

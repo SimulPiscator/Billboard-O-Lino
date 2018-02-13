@@ -15,18 +15,19 @@ import static org.simulpiscator.billboardolino.Billboard.EXTRA_PREFS;
 public class SleepScreenReceiver extends BroadcastReceiver {
     static final String TAG = "bbl:SleepScreenReceiver";
 
-    static private Bitmap sMainBitmap;
+    static private Bitmap sBitmap;
     static private EInkFb.WaveformMode sWaveformMode = EInkFb.WaveformMode.INIT;
     static private boolean sActOnSleep = false;
     static private boolean sActOnShutdown = false;
     static private boolean sUpdateInProgress = false;
+    static private long sWakeLockTimeoutMs = 10000;
     static private final Object sMutex = new Object();
 
     @Override
     public void onReceive(final Context context, final Intent intent) {
         final PowerManager pm = (PowerManager) context.getApplicationContext().getSystemService(Context.POWER_SERVICE);
         final PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG);
-        wl.acquire();
+        wl.acquire(sWakeLockTimeoutMs);
         new Thread() {
             @Override
             public void run() {
@@ -35,7 +36,8 @@ public class SleepScreenReceiver extends BroadcastReceiver {
                 } catch (Exception error) {
                     Log.e(TAG, String.format("%s: %s: %s", intent.getAction(), error.getClass(), error.getMessage()));
                 }
-                wl.release();
+                if(wl.isHeld())
+                    wl.release();
             }
         }.start();
     }
@@ -50,6 +52,7 @@ public class SleepScreenReceiver extends BroadcastReceiver {
                 sWaveformMode = s.getWaveformMode();
                 sActOnSleep = s.getActOnSleep();
                 sActOnShutdown = s.getActOnShutdown();
+                sWakeLockTimeoutMs = Math.max(s.getSyncIntervalMs(), s.getConnectivityTimeoutMs());
             }
             if(intent.getAction() == null) { // alarm intent
                 boolean mayUpdate = false,
@@ -69,7 +72,7 @@ public class SleepScreenReceiver extends BroadcastReceiver {
                     Bitmap b = s.renderImageFromURL(manualSync);
                     synchronized (sMutex) {
                         sUpdateInProgress = false;
-                        sMainBitmap = b;
+                        sBitmap = b;
                         doDisplay = sActOnSleep && !pm.isScreenOn();
                     }
                 }
@@ -85,10 +88,10 @@ public class SleepScreenReceiver extends BroadcastReceiver {
             }
         }
         synchronized (sMutex) {
-            if(doDisplay && sMainBitmap != null) {
+            if(doDisplay && sBitmap != null) {
                 Log.d(TAG, "displaying image");
                 EInkFb fb = new EInkFb();
-                fb.putBitmap(sMainBitmap);
+                fb.putBitmap(sBitmap);
                 fb.refreshSync(sWaveformMode);
                 fb.close();
             }

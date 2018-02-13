@@ -173,7 +173,7 @@ class EInkFb {
      * Trigger display refresh. Returns a refresh ID to be used with wait().
      */
     int refreshAsync(WaveformMode mode) {
-        return nativeRefresh(mNativeFb, mode.value);
+        return nativeRefresh(mNativeFb, mode.value, 0);
     }
 
     /**
@@ -229,7 +229,7 @@ class EInkFb {
 
     private native int nativeGetPowerDownDelay(int p);
     private native boolean nativeSetPowerDownDelay(int p, int delay);
-    private native int nativeRefresh(int p, int waveformMode);
+    private native int nativeRefresh(int p, int waveformMode, int refreshId);
     private native boolean nativeWait(int p, int refreshId);
 
     private native int nativeGetError(int p);
