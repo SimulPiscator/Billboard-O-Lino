@@ -1,6 +1,6 @@
 # Billboard-O-Lino
 This app allows utilization of a Tolino ebook reader's sleep screen to display announcements or data from a web source.
-Using the sleep screen means that the reader will still be available to save its main purpose, and will go back to display 
+Using the sleep screen means that the reader will still be available to serve its main purpose, and will go back to display 
 useful information automatically when putting itself to sleep.
 
 ## Use cases include:
