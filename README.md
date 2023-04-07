@@ -3,6 +3,10 @@ This app allows utilization of a Tolino ebook reader's sleep screen to display a
 Using the sleep screen means that the reader will still be available to serve its main purpose, and will go back to display 
 useful information automatically when putting itself to sleep.
 
+The app has been tested with a Tolino page with software 14.1.0.
+It may be broken with current versions of the Tolino software, or models with advanced e-ink displays.
+Still, the software may be useful for reference.
+
 ## Use cases include:
 * Your OpenWRT-based router has a cron job running that changes the guest wifi passphrase in regular intervals.
 After changing the passphrase, the script calls qrencode to produce a QR code with access information in SVG format,
